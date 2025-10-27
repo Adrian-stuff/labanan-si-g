@@ -24,3 +24,4 @@ class Solution:
 numDays = int(input("Input Number of Days: "))
 sol = Solution(numDays)
 sol.convert_days()
+
