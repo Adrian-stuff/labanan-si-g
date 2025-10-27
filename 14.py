@@ -19,4 +19,5 @@ class Solution:
 a = int(input(" Integer A: "))
 b = int(input(" Integer B: "))
 sol = Solution(a, b)
+
 print(f"Pythagoras Triplet: {sol.solve()}")
