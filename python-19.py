@@ -41,3 +41,4 @@ class Solution:
 x = input("Enter a Number: ")
 sol = Solution(x)
 sol.check_if_magic_number()
+
