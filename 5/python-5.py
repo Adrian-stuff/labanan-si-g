@@ -27,21 +27,27 @@ class Solution:
 
         if choice == 1:
             self.calculateCubeVolume()
+            return
         elif choice == 2:
             self.calculateCuboidVolume()
+            return
         elif choice == 3:
             self.calculateCylinderVolume()
+            return
         elif choice == 4:
             self.calculateSphereVolume()
+            return
         elif choice == 5:
             print("Exited the Program.")
             return
         else:
             print("Error - Please enter a valid input.")
-            self.choice_calculate_volume()
+            self.get_choice()
             
 
     def calculateCubeVolume(self):
+        side = 0
+
         side = float(input("Enter Side Length: "))
         if side < 0:
             print("Error")
@@ -51,6 +57,10 @@ class Solution:
         print(f"Volume: {volume}")
 
     def calculateCuboidVolume(self):
+        length = 0
+        width = 0
+        height = 0
+
         length = float(input("Enter Length:"))
         if length < 0:
             print("Error")
@@ -70,6 +80,9 @@ class Solution:
         print(f"Volume: {volume}")
 
     def calculateCylinderVolume(self):
+        radius = 0
+        height = 0
+        
         radius = float(input("Enter Radius: "))
         if radius < 0:
             print("Error")
@@ -84,6 +97,8 @@ class Solution:
         print(f"Volume {volume}")
 
     def calculateSphereVolume(self):
+        radius = 0
+
         radius = float(input("Enter Radius: "))
         if radius < 0:
             print("Error")
