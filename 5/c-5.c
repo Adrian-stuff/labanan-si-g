@@ -124,6 +124,6 @@ void calculateSphereVolume() {
         return;
     }
 
-    volume = (4.0f / 3.0f) * PI * radius * radius * radius;
+    volume = (4.0 / 3.0) * PI * radius * radius * radius;
     printf("Volume: %.4f\n", volume);
 }
