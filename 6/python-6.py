@@ -85,7 +85,6 @@ class Solution:
         for i in range(self.n + 1):
             if i == 0:
                 continue
-            print(f"1 / {i}")
             s += 1 / math.factorial(i)
         return s
     
@@ -98,6 +97,130 @@ class Solution:
                 continue
             s += 1 / math.factorial(i)
         return s
+    
+    def questionSeriesXI(self):
+        s = 0
+        kth_term = 0
+        for i in range(21):
+            if i == 0:
+                continue
+
+            kth_term = (i * (i + 1)) / 2
+            s += kth_term
+
+        return s
+    
+    def questionSeriesXII(self):
+        s = 0
+        x = int(input("Input a Value of X: "))
+        for i in range(11):
+            if i == 0:
+                continue      
+            if i == 1:
+                s += x
+                continue
+        return s
+    
+    def questionSeriesXIII(self):
+        p = 0
+        x = int(input("Input a Value of X: "))
+        for i in range(10):
+            if i == 1 or i == 0:
+                continue
+            p += math.pow(x, i) / math.factorial(i + 1)
+        return p
+
+    def questionSeriesXIV(self):
+        s = 0
+        for i in range(11):
+            if i == 0:
+                continue
+            if i % 2 != 0:
+                s += i
+            else:
+                s -= i
+        return s
+    
+    def questionSeriesXV(self):
+        s = 0
+        for i in range(11):
+            if i == 0:
+                continue
+            if i % 2 != 0:
+                if i == 1:
+                    s += i
+                    continue
+                s += math.pow(i, 2)
+            else:
+                s -= math.pow(i, 2)
+        return s
+    
+    def questionSeriesXVI(self): # still has something to fix
+        s = 0
+        numerator = 0
+        denominator = 0
+        for i in range(15):
+            numerator = i + 1
+            denominator = i + 3
+            s += numerator / denominator
+            # print(f"{numerator} / {i + 3}")
+        return s
+    
+    def questionSeriesXVII(self):
+        s = 0
+        x = int(input("Enter a Value of X"))
+        for i in range(self.n):
+            if i == 1:
+                s += i
+            elif i == 0:
+                continue
+            elif i % 2 != 0:
+                continue
+            else:
+                s += math.pow(x, i) / math.factorial(i)
+        return s
+    
+    def questionSeriesXVIII(self):
+        s = 0
+        kth_term = 0
+        for i in range(21):
+            if i == 0:
+                continue
+
+            kth_term = (i * (i + 1)) / 2
+            s += kth_term
+
+        return s
+    
+    def questionSeriesXIX(self):
+        s = 0
+        x = int(input("Enter Value of X: "))
+        for i in range(self.n + 1):
+            if i == 0:
+                s += 1
+                continue
+            s += math.pow(x, i) / i
+        return s
+
+    def questionSeriesXX(self):
+        s = 0
+        s += 1 * 3 / 2 * 4 * 5
+        for i in range(self.n):
+            s += ( i + 2 ) * ( i + 4 )
+        s = s * (self.n + 2) / (self.n + 1) * (self.n + 3) * (self.n + 4) 
+        return s
+
+        
+
+
+    
+
+    
+
+
+
+            
+
 
     
 
@@ -119,6 +242,16 @@ class Solution:
         print(f"Question 8: S = {self.questionSeriesVIII()}")
         print(f"Question 9: S = {self.questionSeriesIX()}")
         print(f"Question 10: S = {self.questionSeriesX()}")
+        print(f"Question 11: S = {self.questionSeriesXI()}")
+        print(f"Question 12: S = {self.questionSeriesXII()}")
+        print(f"Question 13: P = {self.questionSeriesXIII()}")
+        print(f"Question 14: S = {self.questionSeriesXIV()}")
+        print(f"Question 15: S = {self.questionSeriesXV()}")
+        print(f"Question 16: S = {self.questionSeriesXVI()}")
+        print(f"Question 17: S = {self.questionSeriesXVII()}")
+        print(f"Question 18: S = {self.questionSeriesXVIII()}")
+        print(f"Question 19: S = {self.questionSeriesXIX()}")
+        print(f"Question 20: S = {self.questionSeriesXX()}")
 
 
 n = int(input("Input N'th Terms (will be used for questions that has no specific N'th terms): "))
