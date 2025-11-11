@@ -17,7 +17,7 @@ float calculateWage(float hours) {
         float tierMaxDuration = TIER_DURATIONS[i];
         
         float workedHours = remainingHours < tierMaxDuration ? remainingHours : tierMaxDuration;
-
+        printf("remaining hours: %f, %f + (%f * %f) = %f \n", remainingHours, totalWage, workedHours, TIER_RATES[i], workedHours * TIER_RATES[i]);
         totalWage += workedHours * TIER_RATES[i];
         
         remainingHours -= workedHours;
@@ -25,6 +25,8 @@ float calculateWage(float hours) {
 
     // above 20hrs
     if (remainingHours > 0) {
+        printf("remaining hours: %f, %f + (%f * %f) = %f \n", remainingHours, totalWage,remainingHours, TIER_RATES[numberOfTiers], remainingHours * TIER_RATES[numberOfTiers]);
+
         totalWage += remainingHours * TIER_RATES[numberOfTiers];
     }
 

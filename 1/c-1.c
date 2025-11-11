@@ -8,7 +8,11 @@ int main()
   for (int i = 0; i < 3; i++)
   {
     printf("Enter side %d: ", i + 1);
-    scanf("%d", &sides[i]);
+    if (scanf("%d", &sides[i]) != 1 || sides[i] <= 0) {
+        printf("Error\n");
+        while (getchar() != '\n');
+        return 0;
+    }
     for (int j = 0; j < i; j++)
     {
       if (sides[i] == sides[j])

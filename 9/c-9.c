@@ -11,6 +11,8 @@ int main(void){
     int total = 1;
     for(int i = 1; i <= number; i++){
         total *= i;
+        if(number == i)         printf("%d = ", i);
+        else printf("%d * ", i);
     }
     printf("%d", total);
     return 0;

@@ -24,16 +24,32 @@ int main()
   printf("Enter quantity of balls: ");
   scanf("%d", &qty_ball);
 
-  total = price_bat * qty_bat + price_wicket * qty_wicket + price_ball * qty_ball;
+  printf("\nBreakdown of calculation:\n");
+  float bat_total = price_bat * qty_bat;
+  float wicket_total = price_wicket * qty_wicket;
+  float ball_total = price_ball * qty_ball;
+  
+  printf("%.2f * %d = %.2f\n", price_bat, qty_bat, bat_total);
+  printf("%.2f * %d = %.2f\n", price_wicket, qty_wicket, wicket_total);
+  printf("%.2f * %d = %.2f\n", price_ball, qty_ball, ball_total);
+  
+  total = bat_total + wicket_total + ball_total;
+  printf("%.2f + %.2f + %.2f = %.2f\n", bat_total, wicket_total, ball_total, total);
+  
   if (total > 300000)
     tax_rate = 0.175f;
   else if (total > 150000)
     tax_rate = 0.125f;
   else
     tax_rate = 0.07f;
+  
   tax = total * tax_rate;
+  printf("%.2f * %.3f = %.2f\n", total, tax_rate, tax);
+  
   grand_total = total + tax;
+  printf("%.2f + %.2f = %.2f\n", total, tax, grand_total);
 
+  printf("\n--- Invoice ---\n");
   printf("Date: %s\n", date);
   printf("Buyer: %s\n", name);
   printf("Total Sales Amount: %.2f\n", total);
